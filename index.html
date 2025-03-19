@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerMata - Find Your Career Path</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>CareerMata</h1>
+        <p>Discover the best career path for you</p>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <h2>Find Your Career</h2>
+            <form id="career-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+
+                <label for="interest">Your Interest:</label>
+                <input type="text" id="interest" placeholder="Enter a career interest" required>
+
+                <button type="submit">Get Career Suggestion</button>
+            </form>
+
+            <div id="results">
+                <p id="output"></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
