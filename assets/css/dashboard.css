@@ -1,0 +1,186 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: #f4f4f4;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 0;
+    background: #fff;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    left: -250px;
+    top: 0;
+    transition: left 0.3s ease-in-out;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Sidebar Open */
+.sidebar.open {
+    left: 0;
+    width: 250px;
+}
+
+/* Sidebar Header */
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Sidebar Title */
+.sidebar h2 {
+    color: #333;
+    font-size: 1.5rem;
+    white-space: nowrap;
+}
+
+/* Sidebar List */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    flex-grow: 1;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+.sidebar ul li a:hover {
+    background: #ddd;
+    border-radius: 5px;
+}
+
+/* Sidebar Toggle Button */
+.toggle-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: #444;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    z-index: 100;
+}
+
+/* Close Sidebar Button */
+.close-btn {
+    background: #444;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 0;
+    padding: 80px 20px;
+    width: 100%;
+    transition: margin-left 0.3s;
+    text-align: center;
+}
+
+/* Heading */
+.main-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.main-content p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Cards - FIXED Spacing Issue */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px; /* Spacing between cards */
+    margin: 20px auto; /* Center the grid */
+    padding: 20px;
+    width: 90%; /* Ensure it doesn’t stretch too much */
+    max-width: 1200px; /* Prevents it from getting too wide */
+}
+
+/* Card Item */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure Equal Bottom Spacing */
+.cards::after {
+    content: "";
+    display: block;
+    height: 20px; /* Adds spacing at the bottom */
+}
+
+/* Responsive Sidebar */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 0;
+        left: -250px;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .toggle-btn {
+        top: 15px;
+        left: 15px;
+    }
+
+    .main-content {
+        padding: 100px 15px 20px;
+        text-align: center;
+    }
+
+    .main-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .main-content p {
+        font-size: 1rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr; /* Stack in single column on mobile */
+    }
+}

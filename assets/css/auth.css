@@ -1,0 +1,91 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+/* Form Container */
+.auth-container {
+    background: #fff; /* White Box */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+}
+
+/* Form Structure */
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Form Title */
+.auth-container h2 {
+    margin-bottom: 15px;
+    color: #000;
+    font-size: 1.8em;
+}
+
+/* Form Inputs */
+.auth-container input,
+.auth-container button {
+    width: 100%; /* Ensures consistent width */
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #555;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #fff;
+    color: #000;
+    box-sizing: border-box; /* Prevents unwanted width expansion */
+}
+
+/* Submit Button */
+.auth-container button {
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.auth-container button:hover {
+    background: #ddd;
+    color: #000;
+}
+
+/* Links */
+.auth-container p {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #000;
+}
+
+.auth-container a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-container a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .auth-container {
+        width: 90%;
+    }
+}
