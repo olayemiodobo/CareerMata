@@ -1,0 +1,58 @@
+/* Splash Screen Background */
+.splash-body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Gray Background */
+    color:  #000; /* Black Text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    animation: fadeOut 3s forwards;
+}
+
+/* Splash Container */
+/* .splash-container {
+    opacity: 1;
+    transition: opacity 3s ease-in-out;
+} */
+
+.splash-container {
+    opacity: 1;
+    background: #fff; /* White Box */
+    padding: 40px;
+    /* border-radius: 10px; */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    transition: opacity 3s ease-in-out;
+}
+
+/* Title */
+.splash-container h1 {
+    font-size: 4em; /* Bigger Font */
+    font-weight: bold;
+    margin: 0;
+    color: #000; /* Black */
+}
+
+/* Tagline */
+.splash-container p {
+    font-size: 1.2em;
+    color: #333; /* Dark Gray */
+    max-width: 450px;
+    margin-top: 10px;
+}
+
+/* Fade Out Effect */
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
