@@ -10,71 +10,84 @@
 
     <!-- Navigation Bar -->
     <header>
-        <h1>CareerMata</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#login">Login</a></li>
-                <li><a href="#signup">Signup</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="https://your-app-link.com" target="_blank" class="cta-button">Try It Now</a></li>
-            </ul>
-        </nav>
+        <div class="nav-container">
+            <h1 class="logo">CareerMata</h1>
+            <div class="hamburger">
+                ☰
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#login">Login</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                   <li> <a href="https://your-app-link.com" target="_blank" class="cta-buttonnav">Try It Now</a> </li>
+                </ul>
+            </nav>
+
+        </div>
     </header>
-
-    <!-- Intro Section -->
-    <section class="intro">
-        <img src="cover-image.jpg" alt="CareerMata AI">
+<!-- Hero Section -->
+ <!-- Intro Section -->
+ <section id="intro">
+    <div class="intro-container">
+        <img src="assets/img/black_shaking.avif" alt="CareerMata Cover" class="intro-image">
         <div class="intro-text">
-            <h2>AI-Powered Career Growth</h2>
-            <p>Smart job matching, resume scanning, and career insights at your fingertips.</p>
-            <a href="https://your-app-link.com" class="cta-button">Get Started</a>
+            <h1>CareerMata</h1>
+            <p>AI-powered career assistant that helps you land your dream job effortlessly.</p>
+            <a href="https://your-app-link.com" class="cta-button">Try It Now</a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Features Section -->
-    <section id="features">
-        <h2>Key Features</h2>
-        <div class="feature-container">
-            <div class="feature">
-                <img src="resume-scan.gif" alt="Resume Scan">
-                <h3>AI Resume Scanner</h3>
-                <p>Get instant feedback and improvement suggestions on your resume.</p>
-            </div>
-            <div class="feature">
-                <img src="job-match.jpg" alt="Job Matching">
-                <h3>Smart Job Matching</h3>
-                <p>AI-powered job recommendations tailored to your skills and experience.</p>
-            </div>
-            <div class="feature">
-                <img src="career-insights.png" alt="Career Insights">
-                <h3>Career Insights</h3>
-                <p>Get real-time data on job trends, salary expectations, and industry insights.</p>
-            </div>
+<!-- Features Section -->
+<section id="features">
+    <h2>Key Features</h2>
+    <div class="features-container">
+        <div class="feature">
+            <img src="assets/images/feature1.jpg" alt="Feature 1">
+            <h3>AI-Powered Resume Analysis</h3>
+            <p>Get instant feedback and optimization tips for your resume to make it ATS-friendly.</p>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <h2>About CareerMata</h2>
-        <p>CareerMata was born out of a frustration with job searching. We built an AI tool to streamline job hunting, improve resumes, and help professionals land their dream roles. This project was built as a portfolio piece and continues to evolve.</p>
-        <p>Developed as part of a personal initiative to integrate AI into career services.</p>
-
-        <h3>Meet the Team</h3>
-        <div class="team">
-            <div class="member">
-                <h4>Olayemi Odobo</h4>
-                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> | 
-                <a href="https://github.com/yourgithub" target="_blank">GitHub</a> | 
-                <a href="https://twitter.com/yourtwitter" target="_blank">Twitter</a>
-            </div>
+        <div class="feature">
+            <img src="assets/images/feature2.jpg" alt="Feature 2">
+            <h3>Personalized Job Matching</h3>
+            <p>Our AI suggests job opportunities based on your skills, experience, and career goals.</p>
         </div>
+        <div class="feature">
+            <img src="assets/images/feature3.jpg" alt="Feature 3">
+            <h3>Interview Preparation</h3>
+            <p>Practice with AI-driven mock interviews and receive real-time feedback to improve.</p>
+        </div>
+    </div>
+</section>
 
-        <h3>Project Repository</h3>
-        <a href="https://github.com/yourrepo" target="_blank">View on GitHub</a>
-    </section>
+<!-- About Section -->
+<section id="about">
+    <h2>About CareerMata</h2>
+    <p>
+        CareerMata was inspired by my personal struggle to find the right job opportunities. 
+        Many job seekers struggle with crafting a great resume and preparing for interviews.
+        This tool was built to make job hunting easier using AI.
+    </p>
+    <p>
+        CareerMata started as a passion project and later became an ALX Portfolio Project. 
+        Check out the full source code and follow our team:
+    </p>
+    
+    <div class="team">
+        <h3>Meet the Creator</h3>
+        <p><strong>Olayemi Odobo</strong></p>
+        <ul>
+            <li><a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/your-github" target="_blank">GitHub</a></li>
+            <li><a href="https://twitter.com/your-twitter" target="_blank">Twitter</a></li>
+        </ul>
+    </div>
 
+    <a href="https://github.com/your-repository" class="cta-button">View on GitHub</a>
+</section>
     <script src="assets/js/landing.js"></script>
 </body>
 </html>

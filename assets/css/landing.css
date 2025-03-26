@@ -1,109 +1,223 @@
-/* General Styling */
-body {
-    font-family: Arial, sans-serif;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    text-align: center;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-h2 {
-    color: #333;
-}
-
-a {
-    text-decoration: none;
-    color: #007bff;
-}
-
-/* Header */
+/* Fix navbar height */
 header {
+    background-color: #222;
+    padding: 10px 20px;
+    display: flex;
+}
+
+/* Navbar container */
+.nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #222;
-    color: white;
-    padding: 15px 30px;
-    position: fixed;
     width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav ul li {
-    display: inline;
-}
-
-.cta-button {
-    background: #007bff;
+/* Logo styles */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-
-/* Intro Section */
-.intro {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 100px 20px;
-    background: white;
-}
-
-.intro img {
-    max-width: 500px;
-    border-radius: 10px;
-}
-
-.intro-text {
     margin-left: 20px;
 }
 
-/* Features */
-#features {
-    padding: 50px 20px;
-    background: #eee;
+.hamburger {
+    margin-left: auto;
+    margin-right: 10px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
 }
 
-.feature-container {
+/* Navigation links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* CTA Button in Navbar */
+.cta-buttonnav {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cta-buttonnav:hover {
+    background-color: #0056b3;
+}
+
+/* -------------------- Hero Section (Now Matches HTML) -------------------- */
+#intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 5%;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+}
+
+/* Left Image (Takes 60%) */
+.intro-image {
+    flex: 0 0 60%;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Right Text Content */
+.intro-text {
+    flex: 0 0 40%;
+    text-align: left;
+}
+
+.intro-text h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.intro-text p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+/* CTA Button - Same as Navbar Button */
+.cta-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #ffcc00;
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ff9900;
+}
+
+/* -------------------- Mobile Mode (≤768px) -------------------- */
+@media screen and (max-width: 768px) {
+    /* Navbar adjustments */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #222;
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+
+    /* Hero Section Adjustments */
+    #intro {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .intro-image {
+        flex: none;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .intro-text {
+        flex: none;
+        text-align: center;
+    }
+}
+
+/* -------------------- Features Section -------------------- */
+#features {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+.features-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .feature {
+    max-width: 300px;
+    text-align: center;
     background: white;
     padding: 20px;
     border-radius: 10px;
-    width: 250px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .feature img {
-    max-width: 100%;
-    border-radius: 5px;
+    width: 100%;
+    max-width: 250px;
 }
 
-/* About Section */
+.feature h3 {
+    margin-top: 15px;
+}
+
+/* -------------------- About Section -------------------- */
 #about {
-    padding: 50px 20px;
+    padding: 60px 20px;
     background: white;
+    text-align: center;
 }
 
-.team {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+#about p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
-.member {
-    background: #eee;
-    padding: 15px;
-    border-radius: 10px;
+#about ul {
+    list-style: none;
+    padding: 0;
+}
+
+#about ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+#about ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
 }
