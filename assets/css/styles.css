@@ -9,7 +9,7 @@
     height: 100vh;
     margin: 0;
     text-align: center;
-    animation: fadeOut 3s forwards;
+    animation: fadeOut 30s forwards;
 }
 
 /* Splash Container */
@@ -32,7 +32,7 @@
     align-items: center;
     justify-content: center;
     min-height: 60vh;
-    transition: opacity 3s ease-in-out;
+    transition: opacity 30s ease-in-out;
 }
 
 /* Title */

@@ -10,8 +10,12 @@
 <body>
 
     <!-- Sidebar Toggle Button -->
+    <!-- <button class="toggle-btn" id="toggleSidebar">☰</button> -->
+<!-- Fixed Navigation Bar -->
+<div class="top-nav">
     <button class="toggle-btn" id="toggleSidebar">☰</button>
-
+    <h1 class="dashboard-title">Welcome to Your Dashboard</h1>
+</div>
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
         <div class="sidebar-header">
@@ -31,8 +35,7 @@
 
     <!-- Main Content -->
     <div class="main-content">
-        <h1>Welcome to Your Dashboard</h1>
-        <p>Track your job applications, scan resumes, and find matching jobs.</p>
+        <h3>Track your job applications, scan resumes, and find matching jobs.</h3>
         
         <div class="cards">
             <div class="card">
@@ -48,6 +51,22 @@
                 <p>3 Applications</p>
             </div>
         </div>
+               <!-- Job Recommendations Section (NEWLY ADDED) -->
+       <div class="job-recommendations">
+        <h2>Recommended Jobs</h2>
+
+            <div class="job-grid" id="job-list"></div>
+            <!-- <button id="next-btn">Next</button> -->
+        </div>
+            <div class="pagination">
+                <button id="prev-btn" class="hidden">←</button>
+                <span id="page-numbers"></span>
+                <button id="next-btn">→</button>
+            </div>
+            
+    
+        </ul>
+    </div>
     </div>
 
 </body>
