@@ -5,6 +5,9 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 /* Fix navbar height */
 header {
@@ -64,32 +67,53 @@ header {
 .cta-buttonnav:hover {
     background-color: #0056b3;
 }
-
-/* -------------------- Hero Section (Now Matches HTML) -------------------- */
+/* Hide hamburger in full & half-screen mode */
+@media screen and (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+}
+/* -------------------- Hero Section  -------------------- */
+/* Hero Section */
 #intro {
     display: flex;
     align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 5%;
+    background: linear-gradient(135deg, black, #0056b3);
+}
+
+.intro-container {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 80px 5%;
-    background: linear-gradient(135deg, #007bff, #0056b3);
+    max-width: 1200px;
+    width: 100%;
+    gap: 20px;
+}
+
+/* Image Styling */
+.intro-image {
+    flex: 1;
+    max-width: 50%;
+}
+
+.intro-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Text Styling */
+.intro-text {
+    flex: 1;
+    text-align: right;
     color: white;
 }
 
-/* Left Image (Takes 60%) */
-.intro-image {
-    flex: 0 0 60%;
-    width: 100%;
-    max-width: 600px;
-}
-
-/* Right Text Content */
-.intro-text {
-    flex: 0 0 40%;
-    text-align: left;
-}
-
 .intro-text h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bold;
 }
 
@@ -98,11 +122,10 @@ header {
     margin: 20px 0;
 }
 
-/* CTA Button - Same as Navbar Button */
 .cta-button {
     display: inline-block;
     padding: 12px 20px;
-    background-color: #ffcc00;
+    background-color: white;
     color: #222;
     text-decoration: none;
     font-weight: bold;
@@ -111,8 +134,41 @@ header {
 }
 
 .cta-button:hover {
-    background-color: #ff9900;
+    background-color: black;
+    color: white;
 }
+
+/* 🔹 Responsive Fix for Smaller Screens */
+@media (max-width: 900px) {
+    .intro-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-image {
+        max-width: 90%;
+    }
+
+    .intro-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .intro-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro-text p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 10px 16px;
+    }
+}
+
+
+
 
 /* -------------------- Mobile Mode (≤768px) -------------------- */
 @media screen and (max-width: 768px) {
@@ -140,24 +196,6 @@ header {
         color: white;
         cursor: pointer;
         margin-right: 20px;
-    }
-
-    /* Hero Section Adjustments */
-    #intro {
-        flex-direction: column;
-        text-align: center;
-        padding: 60px 20px;
-    }
-
-    .intro-image {
-        flex: none;
-        width: 100%;
-        max-width: 400px;
-    }
-
-    .intro-text {
-        flex: none;
-        text-align: center;
     }
 }
 
@@ -218,6 +256,6 @@ header {
 
 #about ul li a {
     text-decoration: none;
-    color: #007bff;
+    color: navy;
     font-weight: bold;
 }

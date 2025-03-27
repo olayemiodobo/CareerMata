@@ -3,20 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | CareerMata</title>
-    <link rel="stylesheet" href="assets/css/auth.css">
+    <title>CareerMata | AI-Powered Career Tool</title>
+    <link rel="stylesheet" href="assets/css/landing.css">
 </head>
 <body>
-    <div class="auth-container">
-        <h2>Login to CareerMata</h2>
-        <form id="loginForm">
-            <input type="email" id="loginEmail" placeholder="Email" required>
-            <input type="password" id="loginPassword" placeholder="Password" required>
-            <button type="submit">Login</button>
-            <p class="error-message" id="loginError"></p>
-        </form>
-        <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="nav-container">
+            <h1 class="logo">CareerMata</h1>
+            <div class="hamburger">
+                ☰
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <!-- <li><a href="#intro">Why</a></li> -->
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="https://olayemiodobo.github.io/CareerMata/">Login</a></li>
+                    <li><a href="#about">About</a></li>
+                   <li> <a href="https://olayemiodobo.github.io/CareerMata/" target="_blank" class="cta-buttonnav">Try It Now</a> </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+<!-- Hero Section -->
+ <!-- Intro Section -->
+ <section id="intro">
+    <div class="intro-container">
+        <img src="assets/img/black_shaking.avif" alt="CareerMata Cover" class="intro-image">
+
+        <div class="intro-text">
+            <h1>CareerMata</h1>
+            <p>AI-powered career assistant that helps you land your dream job effortlessly.</p>
+            <a href="https://olayemiodobo.github.io/CareerMata/" class="cta-button">Try It Now</a>
+        </div>
     </div>
-    <script src="assets/js/auth.js"></script>
+</section>
+
+<!-- Features Section -->
+<section id="features">
+    <h2>Key Features</h2>
+    <br>
+    <div class="features-container">
+        <div class="feature">
+            <img src="assets/img/ai-analysis.webp" alt="Feature 1" width="200px" height="200px">
+            <h3>AI-Powered Resume Analysis</h3>
+            <p>Get instant feedback and optimization tips for your resume to make it ATS-friendly.</p>
+        </div>
+        <div class="feature">
+            <img src="assets/img/job match.png" alt="Feature 2 " width="200px" height="200px">
+            <h3>Personalized Job Matching</h3>
+            <p>Our AI suggests job opportunities based on your skills, experience, and career goals.</p>
+        </div>
+        <div class="feature">
+            <img src="assets/img/interview prep.png" alt="Feature 3" width="200px" height="200px">
+            <h3>Interview Preparation</h3>
+            <p>Practice with AI-driven mock interviews and receive real-time feedback to improve.</p>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+    <h2>About CareerMata</h2>
+    <br>
+    <p>
+        CareerMata was inspired by my personal struggle to find the right job opportunities. 
+        Many job seekers struggle with crafting a great resume and preparing for interviews.
+        This tool was built to make job hunting easier using AI.
+    </p>
+    <br>
+    <p>
+        This project started as a passion project and later became an ALX Portfolio Project. 
+        Check out the full source code and follow our team:
+    </p>
+    <br>
+    <br>
+    <div class="team">
+        <h3>Meet The Creator</h3>
+        <p><strong>Olayemi Odobo</strong></p>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/olayemi-odobo" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/olayemiodobo" target="_blank">GitHub</a></li>
+            <li><a href="https://https://x.com/OlayemiOdb" target="_blank">Twitter</a></li>
+        </ul>
+    </div>
+
+    <a href="https://github.com/olayemiodobo/CareerMata" class="cta-button">View on GitHub</a>
+</section>
+    <script src="assets/js/landing.js"></script>
 </body>
 </html>
